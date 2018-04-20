@@ -41,3 +41,27 @@ class Queue
     print "Queue Start"
   end
 end
+
+class Map
+  attr_accessor :map
+  def initialize
+    @map = []
+  end
+
+  def assign(key, value)
+    @map << [key, value] if @map.none? {|kv| kv.first == key}
+  end
+
+  def lookup(key)
+    @map.select {|kv| kv.first == key}[0].last
+  end
+
+  def remove(key)
+    @map.reject! {|kv| kv.first == key}
+  end
+
+  def show
+    @map.each {|k| print "#{k.first} => #{k.last} \n"}
+  end
+
+end

@@ -19,3 +19,25 @@ class Stack
   end
 
 end
+
+class Queue
+  attr_accessor :queue
+
+  def initialize
+    @queue = []
+  end
+
+  def enqueue(el)
+    @queue << el
+  end
+
+  def dequeue
+    @queue.shift
+  end
+
+  def show
+    print "Queue End "
+    print @queue
+    print "Queue Start"
+  end
+end

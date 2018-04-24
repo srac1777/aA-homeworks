@@ -29,7 +29,7 @@ class Mancala
 
         begin
           start_pos = current_player.prompt
-          start_pos -= 1 if start_pos <= 6
+          # start_pos -= 1 if start_pos <= 6
           @board.valid_move?(start_pos)
         rescue Exception => e
           puts e.message

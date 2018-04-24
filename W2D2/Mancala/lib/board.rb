@@ -65,7 +65,7 @@ class Board
     # helper method to determine what #make_move returns
     return :prompt if k == 6 && current_player == @player1
     return :prompt if k == 13 && current_player == @player2
-    if @cups[k].empty?
+    if @cups[k].length == 1
       return :switch
     else
       return k

@@ -1,0 +1,9 @@
+<h1>Create a Band</h1>
+<% if flash[:errors] %>
+  <% render flash[:errors] %>
+<% end %>
+<form action="<%= bands_url%>" method="post">
+  <label for="band">Band Name: </label>
+  <input id="band" type="text" name="band[name]" value="">
+  <input type="submit" name="" value="Create">
+</form>

@@ -1,0 +1,22 @@
+<h1>Welcome to the Music App</h1>
+
+<% if flash[:errors] %>
+<ul>
+  <% flash[:errors].each do |e| %>
+    <li> <%= e %></li>
+  <% end %>
+</ul>
+<% end %>
+<form action="<%=new_user_url%>" method="post">
+  <input type="hidden" name="_method" value="GET">
+  <input type="submit" name="" value="signup">
+</form>
+<form action="<%= session_url %>" method="post">
+  <label for="email">Email: </label>
+  <input id="email" type="text" name="user[email]" value="">
+
+  <label for="pw">password: </label>
+  <input id="pw" type="text" name="user[password]" value="">
+  <input type="submit" value="Login">
+
+</form>
